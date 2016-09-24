@@ -1,0 +1,106 @@
+/* latin-ext */
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Code Pro'), local('SourceCodePro-Regular'), url(../fonts/SourceCodePro-Regular.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Code Pro'), local('SourceCodePro-Regular'), url(../fonts/SourceCodePro-Regular.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    color: #F7F7F7;
+    font-family: "Source Code Pro","Microsoft JhengHei","Helvitica Neue",Helvitica,Arial,"Hiragino Sans GB",sans-serif;
+    line-height: 1.2;
+    background: black;
+}
+
+.terminal {
+    padding: 20px;
+}
+
+.terminal .terminal-output {
+}
+
+.terminal .terminal-output .row {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.terminal .terminal-output .row span {
+    display: inline-block;
+}
+
+.terminal .terminal-input {
+    position: relative;
+    height: 1.2em;
+}
+
+.terminal .terminal-input span {
+    float: left;
+}
+
+.terminal .terminal-input .prompt {
+    float: left;
+}
+
+.terminal .terminal-input .cursor-blink {
+    -webkit-animation: terminal-blink 1s infinite steps(1,start);
+    -moz-animation: terminal-blink 1s infinite steps(1,start);
+    -ms-animation: terminal-blink 1s infinite steps(1,start);
+    animation: terminal-blink 1s infinite steps(1,start);
+}
+
+.terminal .terminal-input .cursor-blink.empty {
+    height: 1.2em;
+    width: 10px;
+}
+
+@-webkit-keyframes terminal-blink {
+    0%,100% {color: white;background-color: black;}
+    50% {color: black;background-color: white;}
+}
+
+@-ms-keyframes terminal-blink {
+    0%,100% {color: white;background-color: black;}
+    50% {color: black;background-color: white;}
+}
+
+@-moz-keyframes terminal-blink {
+    0%,100% {color: white;background-color: black;}
+    50% {color: black;background-color: white;}
+}
+
+@keyframes terminal-blink {
+    0%,100% {color: white;background-color: black;}
+    50% {color: black;background-color: white;}
+}
+
+.terminal .terminal-input .input {
+    position: relative;
+}
+
+.terminal .terminal-input .clipboard {
+    position: absolute;
+    height: 20px;
+    left: -6px;
+    width: 5px;
+    background: transparent;
+    border: 0;
+    color: transparent;
+    outline: 0;
+    padding: 0;
+    resize: none;
+    z-index: 0;
+    overflow: hidden;
+}
